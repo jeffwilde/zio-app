@@ -6,7 +6,8 @@ ThisBuild / organizationName := "example"
 nativeImageOptions ++= List(
   "--no-fallback",
   "--allow-incomplete-classpath",
-  "--initialize-at-build-time=org.eclipse.jgit.ignore.internal.PathMatcher",
+  "--initialize-at-build-time",
+  "--initialize-at-run-time=org.jline.terminal.impl",
   "-H:ReflectionConfigurationFiles=../../src/main/resources/reflection-config.json",
   "--report-unsupported-elements-at-runtime"
 )
